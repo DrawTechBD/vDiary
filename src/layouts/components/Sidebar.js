@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom';
 function Sidebar () {
     return (
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
@@ -25,10 +25,10 @@ function Sidebar () {
                     <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li className="nav-item">
-                            <a href="/#" className="nav-link"><i className="nav-icon fas fa-film"/>Movies</a>
+                            <Link to="/movies" className="nav-link"><i className="nav-icon fas fa-film"/>Movies</Link>
                         </li>
                         <li className="nav-item">
-                            <a href="/#" className="nav-link"><i className="nav-icon fas fa-music"/>Songs</a>
+                            <Link to="/songs" className="nav-link"><i className="nav-icon fas fa-music"/>Songs</Link>
                         </li>
                         <li className="nav-item">
                             <a href="/#" className="nav-link"><i className="nav-icon fas fa-book"/>Books</a>
