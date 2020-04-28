@@ -7,6 +7,7 @@ import Footer from './layouts/components/Footer';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Movies from "./layouts/pages/Movies";
 import Songs from "./layouts/pages/Songs";
+import MovieView from "./layouts/pages/MovieView";
 
 
 function App() {
@@ -19,12 +20,9 @@ function App() {
                   {/*<Breadcumb/>*/}
                   <section className="content">
                       <Switch>
-                          <Route path="/movies">
-                              <Movies/>
-                          </Route>
-                          <Route path="/songs">
-                              <Songs/>
-                          </Route>
+                          <Route exact path="/movie" component={Movies}/>
+                          <Route path="/movie/:id" component={MovieView}/>
+                          <Route path="/songs" component={Songs}/>
                       </Switch>
                   </section>
               </div>
